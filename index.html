@@ -3,88 +3,243 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Landon Smith | Portfolio</title>
+  <title>Landon Smith | Professional Portfolio</title>
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f5f7;
-      color: #222;
-      line-height: 1.6;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f6f8;
+      color: #253044;
+      line-height: 1.7;
     }
+
     header {
-      background: #b00020;
+      background: #a60925;
       color: white;
-      padding: 55px 20px;
+      padding: 65px 24px;
       text-align: center;
     }
-    header h1 { margin: 0; font-size: 40px; }
-    main { max-width: 850px; margin: 30px auto; padding: 0 20px; }
+
+    header h1 {
+      margin: 0 0 12px;
+      font-size: clamp(36px, 7vw, 52px);
+      line-height: 1.2;
+    }
+
+    header p {
+      margin: 6px 0;
+    }
+
+    .subtitle {
+      font-size: 19px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 24px;
+      padding: 16px;
+      background: white;
+      border-bottom: 1px solid #e2e5ea;
+    }
+
+    nav a {
+      color: #a60925;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 36px auto;
+      padding: 0 20px;
+    }
+
     section {
       background: white;
-      padding: 25px;
-      margin-bottom: 25px;
+      padding: 32px;
+      margin-bottom: 28px;
+      border: 1px solid #e2e5ea;
       border-radius: 12px;
-      box-shadow: 0 3px 12px #0000000d;
     }
-    h2 { color: #b00020; }
-    article { border-top: 1px solid #ddd; padding: 10px 0; }
-    footer { text-align: center; padding: 20px; }
+
+    h2 {
+      margin: 0 0 18px;
+      font-size: 27px;
+      color: #a60925;
+    }
+
+    h3 {
+      margin: 0 0 10px;
+      font-size: 21px;
+      color: #253044;
+    }
+
+    p {
+      margin: 0 0 16px;
+    }
+
+    .statement {
+      font-size: 19px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .skills li {
+      background: #fff0f3;
+      color: #86102a;
+      border: 1px solid #f3d3da;
+      border-radius: 8px;
+      padding: 9px 15px;
+      font-weight: bold;
+    }
+
+    .project {
+      padding: 24px;
+      background: #f8f9fb;
+      border: 1px solid #e2e5ea;
+      border-left: 4px solid #a60925;
+      border-radius: 8px;
+    }
+
+    .project + .project {
+      margin-top: 20px;
+    }
+
+    .project p:last-child {
+      margin-bottom: 0;
+    }
+
+    .project-type {
+      margin-bottom: 8px;
+      color: #687386;
+      font-size: 13px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .project-skills {
+      font-size: 14px;
+      color: #526074;
+    }
+
+    footer {
+      text-align: center;
+      color: #687386;
+      padding: 12px 20px 32px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 45px 20px;
+      }
+
+      section {
+        padding: 24px;
+      }
+
+      .project {
+        padding: 20px;
+      }
+    }
   </style>
 </head>
+
 <body>
   <header>
     <h1>Landon Smith</h1>
-    <p>Rutgers Business School | Finance</p>
+    <p class="subtitle">Finance Student | Aspiring Underwriting Professional</p>
+    <p>Rutgers Business School Honors Program</p>
+    <p>Real Estate Concentration · Expected Graduation: May 2028</p>
   </header>
 
+  <nav aria-label="Main navigation">
+    <a href="#statement">Personal Statement</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+  </nav>
+
   <main>
-    <section>
+    <section id="statement">
       <h2>Personal Statement</h2>
-      <p>
-        I am a Rutgers Business School finance student interested in
-        applying analytical and leadership skills to a career in
-        finance and real estate.
+      <p class="statement">
+        I am a finance major in the Rutgers Business School Honors
+        Program with a concentration in Real Estate, preparing for
+        a career in underwriting and insurance where I can apply
+        financial analysis, attention to detail, and an interest
+        in evaluating risk to support informed business decisions.
       </p>
     </section>
 
-    <section>
+    <section id="skills">
       <h2>Skills</h2>
-      <ul>
+      <ul class="skills">
         <li>Microsoft Excel</li>
-        <li>Financial analysis</li>
-        <li>Problem solving</li>
-        <li>Teamwork and communication</li>
-        <li>Leadership and event planning</li>
+        <li>Financial Analysis</li>
+        <li>Data Analysis</li>
+        <li>Attention to Detail</li>
+        <li>Leadership</li>
+        <li>Event Planning and Budgeting</li>
+        <li>Volunteer Coordination</li>
+        <li>Customer Service and Sales</li>
+        <li>Social Media Marketing</li>
+        <li>Teamwork and Communication</li>
       </ul>
     </section>
 
-    <section>
+    <section id="projects">
       <h2>Projects</h2>
 
-      <article>
-        <h3>Project One</h3>
+      <article class="project">
+        <p class="project-type">Community Service</p>
+        <h3>RU4Kids</h3>
         <p>
-          Replace this with the name and description of a completed
-          project. Explain what you did, which skills you used,
-          and what you learned.
+          My involvement with RU4Kids reflects my commitment to
+          community service and supporting others. Alongside my
+          philanthropy work with Chi Phi, this experience highlights
+          the importance of teamwork, communication, and building
+          connections beyond the classroom.
+        </p>
+        <p class="project-skills">
+          <strong>Skills highlighted:</strong>
+          Teamwork, communication, and community engagement.
         </p>
       </article>
 
-      <article>
-        <h3>Project Two</h3>
+      <article class="project">
+        <p class="project-type">Volunteer Operations</p>
+        <h3>Red Cross Blood Drive</h3>
         <p>
-          Replace this with another completed project. Class
-          assignments, Excel analyses, and business simulations
-          can work if they demonstrate relevant skills.
+          As a Red Cross volunteer in Delran, New Jersey, I supported
+          blood drive operations by managing donor check-in, verifying
+          identification, and ensuring registration was completed.
+          I also guided donors through the process, maintained
+          organized records, and supported staff during busy
+          donation periods.
         </p>
-      </article>
-
-      <article>
-        <h3>Project Three</h3>
-        <p>
-          Replace this with a third project, or remove this article
-          if you are including only two projects.
+        <p class="project-skills">
+          <strong>Skills highlighted:</strong>
+          Organization, attention to detail, record keeping,
+          and donor communication.
         </p>
       </article>
     </section>
